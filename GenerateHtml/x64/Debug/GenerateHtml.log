@@ -1,3 +1,4 @@
 ﻿  Source.c
 C:\Users\User\source\repos\GenerateHtml\GenerateHtml\Source.c(26,3): warning C4013: 'exit' undefined; assuming extern returning int
+C:\Users\User\source\repos\GenerateHtml\GenerateHtml\Source.c(99,2): warning C4013: 'gets' undefined; assuming extern returning int
   GenerateHtml.vcxproj -> C:\Users\User\source\repos\GenerateHtml\x64\Debug\GenerateHtml.exe

@@ -95,33 +95,22 @@ void generateHtmlFromPattern()
 	char str1[100];
 	char str2[1000]="";
 	char* token = 0,*token2=0;
-	scanf("%s", str);
-	FILE* f = fopen(str, "r"); //test.html
+	printf("Please enter your name: ");
+	gets(str);
+	FILE* f = fopen("test.html", "r"); //
 	if (!f)
 	{
 		exit(1);
 	}
 	while (fgets(str1, sizeof(str1), f))
 	{
-		token = strtok(str1, ">");
+		token = strtok(str1, "[");
 		strcat(str2, token);
-		strcat(str2, ">");
-		token = strtok(NULL, "]");
-		if (!token)
-		{
-			continue;
-		}
-		if (*token == '[')
+		token = strtok(NULL, "]"); 
+		if (token)
 		{
 			strcat(str2, str);
-			token = strtok(NULL, "<");
-			strcat(str2, "<");
-		}else{
-			strcat(str2, token);
-		}
-		token = strtok(NULL, "\n");
-		if(token)
-		{
+			token = strtok(NULL, "]");
 			strcat(str2, token);
 		}
 	}
